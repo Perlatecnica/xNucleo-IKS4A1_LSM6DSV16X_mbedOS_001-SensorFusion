@@ -25,7 +25,7 @@ SOFTWARE.
 */
 
 #include "mbed.h"
-#include "LSM6DSV16X.h"
+#include "plt_iks4a1.h"
 #include <cmath>
 
 #define ALGO_FREQ  120U /* Algorithm frequency 120Hz */
@@ -47,14 +47,6 @@ unsigned long startTime, elapsedTime;
 uint8_t tag = 0;
 float quaternions[4] = {0};
 float q0, q1, q2, q3 = 0;
-
-// Define the smoothing constant
-const float alpha = 0.1f;
-
-// Define variables for filtered angle estimates
-float roll_filtered = 0.0f;
-float pitch_filtered = 0.0f;
-float yaw_filtered = 0.0f;
 
 // main() runs in its own thread in the OS
 int main()
@@ -138,8 +130,6 @@ int main()
                     pitch *= (float)((float)180.0 / (float)PI);
                     yaw *= (float)((float)180.0 / (float)PI);
                     #endif
-
-
                 }
             }
         }
