@@ -2,6 +2,7 @@
 
 This application shows how to use LSM6DSV16X Sensor Fusion features for reading quaternions.
 
+---
 ### Description:
 
 This code demonstrates a sensor fusion application using the LSM6DSV16X inertial measurement sensor with an mbed microcontroller. It performs sensor fusion to compute quaternion data, and optionally Euler angles, from raw sensor readings.
