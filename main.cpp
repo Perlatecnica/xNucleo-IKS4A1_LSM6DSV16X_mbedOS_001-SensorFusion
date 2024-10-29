@@ -6,6 +6,19 @@ Organization: Perlatecnica APS ETS
 Author: Mauro D'Angelo
 Example to use the LSM6DSV16X library with Sensor Fusion Low Power
 
+Quaternions are an advanced method for representing rotations in three-dimensional space, 
+widely used in 3D graphics, robotics, and virtual reality. One of their main advantages is 
+that they avoid the issue of **gimbal lock**, a common problem in rotation representations 
+based on Euler angles (such as pitch, yaw, and roll).
+Gimbal lock occurs when two of the three rotation axes align, causing the object’s orientation 
+to lose a degree of freedom. This happens, for example, when one axis lines up perfectly with 
+another, removing one possible direction of movement. In this situation, it becomes impossible 
+to rotate the object freely in all directions, and the range of orientations is "locked" or limited.
+Quaternions solve this problem by representing rotations without relying on three fixed axes. 
+Instead, they describe rotations in a four-dimensional space, which allows them to handle any possible 
+rotation smoothly, without the risk of axis alignment causing gimbal lock. This makes them ideal for 
+applications that require fluid and precise control of an object's orientation in three-dimensional space.
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
